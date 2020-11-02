@@ -1,0 +1,214 @@
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJardins (20201102172728)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "jardins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "has_magic_knomes" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201102172728"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-02 17:34:56.709903"], ["updated_at", "2020-11-02 17:34:56.709903"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.9ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gaia"], ["location", "Kabirizi, Rwanda"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:35:07.289986"], ["updated_at", "2020-11-02 17:35:07.289986"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aether"], ["location", "Mattari, Yemen"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:35:07.297884"], ["updated_at", "2020-11-02 17:35:07.297884"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.5ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eros"], ["location", "Chiriqui, Panama"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:35:07.315200"], ["updated_at", "2020-11-02 17:35:07.315200"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.9ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Thalassa"], ["location", "Montecillos, Honduras"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:35:07.319480"], ["updated_at", "2020-11-02 17:35:07.319480"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nemesis"], ["location", "Nayarit, Mexico"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:35:07.327135"], ["updated_at", "2020-11-02 17:35:07.327135"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mJardin Load (0.3ms)[0m  [1m[34mSELECT "jardins".* FROM "jardins" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/jardins" for ::1 at 2020-11-02 11:38:18 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/jardins"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/jardins" for ::1 at 2020-11-02 11:39:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by JardinsController#index as HTML
+  Rendering jardins/index.html.erb within layouts/application
+  Rendered jardins/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 91)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alyssaeasterly/Flatiron/code/rails_app_m2m/Garden/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 3183ms
+Built at: 11/02/2020 11:40:03 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5753ms (Views: 5752.1ms | ActiveRecord: 0.0ms | Allocations: 19744)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBugs (20201102174451)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "bugs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "type" varchar, "healthy_garden_bug" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201102174451"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.6ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ourea"], ["location", "Kayanza, Burundi"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:51:57.005626"], ["updated_at", "2020-11-02 17:51:57.005626"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.5ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ourea"], ["location", "Kigeyo Washing Station, Rwanda"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:51:57.014898"], ["updated_at", "2020-11-02 17:51:57.014898"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.8ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Thalassa"], ["location", "San'ani, Yemen"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:51:57.020756"], ["updated_at", "2020-11-02 17:51:57.020756"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.7ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Uranus"], ["location", "Harrar, Ethiopia"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:51:57.026945"], ["updated_at", "2020-11-02 17:51:57.026945"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aether"], ["location", "Northern Region, Arusha, Tanzania"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:51:57.032606"], ["updated_at", "2020-11-02 17:51:57.032606"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.5ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Thalassa"], ["location", "Montecillos, Honduras"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:52:49.613749"], ["updated_at", "2020-11-02 17:52:49.613749"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Erebus"], ["location", "Biligiris, India"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:52:49.618991"], ["updated_at", "2020-11-02 17:52:49.618991"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nemesis"], ["location", "Western Region, Bukova, Tanzania"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:52:49.623598"], ["updated_at", "2020-11-02 17:52:49.623598"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eros"], ["location", "Masaya, Nicaragua"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:52:49.629980"], ["updated_at", "2020-11-02 17:52:49.629980"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aion"], ["location", "Chiriqui, Panama"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:52:49.636567"], ["updated_at", "2020-11-02 17:52:49.636567"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (1.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nyx"], ["location", "Kayanza, Burundi"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:55:36.853006"], ["updated_at", "2020-11-02 17:55:36.853006"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eros"], ["location", "Meru, Kenya"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:55:36.858800"], ["updated_at", "2020-11-02 17:55:36.858800"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Erebus"], ["location", "Western Region, Bukova, Tanzania"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:55:36.871953"], ["updated_at", "2020-11-02 17:55:36.871953"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aether"], ["location", "Kibale, Uganda"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:55:36.877413"], ["updated_at", "2020-11-02 17:55:36.877413"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eros"], ["location", "Kigeyo Washing Station, Rwanda"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:55:36.881256"], ["updated_at", "2020-11-02 17:55:36.881256"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.5ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pontus"], ["location", "Lintong, Sumatra"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:56:31.576652"], ["updated_at", "2020-11-02 17:56:31.576652"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.7ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chronos"], ["location", "Gishamwana Coffee Island, Rwanda"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:56:31.583519"], ["updated_at", "2020-11-02 17:56:31.583519"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eros"], ["location", "Limu, Ethiopia"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:56:31.588461"], ["updated_at", "2020-11-02 17:56:31.588461"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chaos"], ["location", "Lintong, Sumatra"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:56:31.593362"], ["updated_at", "2020-11-02 17:56:31.593362"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ourea"], ["location", "Cauca, Colombia"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:56:31.597597"], ["updated_at", "2020-11-02 17:56:31.597597"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.8ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nesoi"], ["location", "Jalisco, Mexico"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:57:22.270928"], ["updated_at", "2020-11-02 17:57:22.270928"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.5ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Erebus"], ["location", "Nariño, Colombia"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:57:22.291689"], ["updated_at", "2020-11-02 17:57:22.291689"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chaos"], ["location", "Harrar, Ethiopia"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:57:22.296429"], ["updated_at", "2020-11-02 17:57:22.296429"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Uranus"], ["location", "Bungoma, Kenya"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:57:22.301373"], ["updated_at", "2020-11-02 17:57:22.301373"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nesoi"], ["location", "Comayagua, Honduras"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:57:22.306487"], ["updated_at", "2020-11-02 17:57:22.306487"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (1.2ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pontus"], ["location", "Huehuetenango, Guatemala"], ["has_magic_knomes", 1], ["created_at", "2020-11-02 17:59:23.128488"], ["updated_at", "2020-11-02 17:59:23.128488"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.4ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ourea"], ["location", "Limu, Ethiopia"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:59:23.135833"], ["updated_at", "2020-11-02 17:59:23.135833"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.7ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nyx"], ["location", "Lake Tawar, Sumatra"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:59:23.140750"], ["updated_at", "2020-11-02 17:59:23.140750"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.3ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hypnos"], ["location", "Bugisu, Uganda"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:59:23.146322"], ["updated_at", "2020-11-02 17:59:23.146322"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mJardin Create (0.8ms)[0m  [1m[32mINSERT INTO "jardins" ("name", "location", "has_magic_knomes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nemesis"], ["location", "Western Region, Kigoma, Tanzania"], ["has_magic_knomes", 0], ["created_at", "2020-11-02 17:59:23.150799"], ["updated_at", "2020-11-02 17:59:23.150799"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
