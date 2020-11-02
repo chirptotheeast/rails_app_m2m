@@ -1,2 +1,16 @@
-<h1>Jardins#show</h1>
-<p>Find me in app/views/jardins/show.html.erb</p>
+<h1>Name: <%= @jardin.name %></h1>
+
+
+
+<br>
+<h2>Location: <%= @jardin.location%></h2>
+<br>
+<h2>Has Magic Knome? <%= @jardin.has_magic_knomes%></h2>
+<br>
+<br>
+<%= link_to "Back to Jardin Index", jardins_path%>
+<br>
+<br>
+<br>
+<br>
+<%= image_tag"https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"%>

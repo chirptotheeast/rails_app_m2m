@@ -1,2 +1,12 @@
-<h1>Bugs#show</h1>
-<p>Find me in app/views/bugs/show.html.erb</p>
+<h1> <%= @bug.name%> </h1>
+
+<br>
+
+  <h3>Bug type:  <%= @bug.bug_type %></h3>
+<br>
+  <h3>Healthy garden bug? <%= @bug.healthy_garden_bug %> </h3>
+<br>
+<br>
+
+  <h4><%= link_to "Back to Bug List", bugs_path%></h4>
+  

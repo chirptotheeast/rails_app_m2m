@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_174451) do
+ActiveRecord::Schema.define(version: 2020_11_02_212404) do
 
   create_table "bugs", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "bug_type"
     t.boolean "healthy_garden_bug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "flowers", force: :cascade do |t|
+    t.string "name"
+    t.boolean "annuals"
+    t.integer "exotic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "jardin_id"
+    t.integer "bug_id"
   end
 
   create_table "jardins", force: :cascade do |t|

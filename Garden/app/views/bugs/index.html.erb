@@ -1,2 +1,11 @@
-<h1>Bugs#index</h1>
-<p>Find me in app/views/bugs/index.html.erb</p>
+<h1>Bugs</h1>
+
+
+<ol>
+<% @bugs.each do |bug|%>    
+    <h3><li><%= link_to bug.name, bug_path(bug.id)%></li></h3>
+<% end %>
+</ol>
+
+
+<h4><%= link_to "Go to Home", home_path%></h4>

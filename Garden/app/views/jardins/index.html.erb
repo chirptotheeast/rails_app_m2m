@@ -1,2 +1,8 @@
-<h1>Jardins#index</h1>
-<p>Find me in app/views/jardins/index.html.erb</p>
+<h1>Jardins</h1>
+
+
+<ol>
+<% @jardins.each do |jardin|%>
+    <h3><li><%= link_to jardin.name, jardin_path(jardin.id)%></li></h3>
+<% end%>
+</ol>
